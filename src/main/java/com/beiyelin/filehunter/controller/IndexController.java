@@ -32,6 +32,10 @@ public class IndexController implements Initializable {
     private TableColumn<FileBean,String> tbcFileAbstract;
     @FXML
     private TableColumn<FileBean,String> tbcFilePathName;
+    @FXML
+    private TableColumn<FileBean,String> tbcFileKeywords;
+    @FXML
+    private TableColumn<FileBean,String> tbcFileSummary;
 
     @Autowired
     private FileSearchService fileSearchService;
@@ -51,10 +55,12 @@ public class IndexController implements Initializable {
     }
 
     public void searchFiles(){
-        final String dirName = "e:\\dsm-baiduyun\\partner\\";
+        final String dirName = "e:\\temp\\";
         tbcFileName.setCellValueFactory(new PropertyValueFactory<FileBean,String>("name"));
-        tbcFileAbstract.setCellValueFactory(new PropertyValueFactory<FileBean,String>("createTime"));
+        tbcFileAbstract.setCellValueFactory(new PropertyValueFactory<FileBean,String>("fileType"));
         tbcFilePathName.setCellValueFactory(new PropertyValueFactory<FileBean,String>("dirName"));
+        tbcFileKeywords.setCellValueFactory(new PropertyValueFactory<FileBean,String>("keywords"));
+        tbcFileSummary.setCellValueFactory(new PropertyValueFactory<FileBean,String>("summary"));
         tblFileList.setItems(fileSearchService.getFilesObservable(dirName));
 
     }

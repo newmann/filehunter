@@ -9,4 +9,7 @@ class FileBean {
     String name
     String dirName
     String createTime
+    String fileType
+    String keywords
+    String summary
 }

@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:F:\\temp\\sqlite\\db.db
+    username:
+    password:
+### sqlite需要自己配置连接方式
+  jpa:
+    database-platform: com.beiyelin.filehunter.sqlite.SQLiteDialect #自己配置的方言
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+

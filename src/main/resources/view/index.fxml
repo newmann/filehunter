@@ -28,6 +28,8 @@
           <TableColumn fx:id="tbcFileName" prefWidth="161.0" text="文件名" />
           <TableColumn fx:id="tbcFileAbstract" minWidth="0.0" prefWidth="291.0" text="摘要" />
             <TableColumn fx:id="tbcFilePathName" prefWidth="209.0" text="路径" />
+            <TableColumn fx:id="tbcFileKeywords" prefWidth="75.0" text="关键字" />
+            <TableColumn fx:id="tbcFileSummary" prefWidth="75.0" text="摘要" />
         </columns>
       </TableView>
    </center>
